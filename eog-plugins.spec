@@ -12,10 +12,10 @@ BuildRequires:  eog-devel >= 2.19.0
 BuildRequires:  pygtk2.0-devel
 BuildRequires:  libchamplain-devel
 BuildRequires:  libexif-devel
-#gw not packaged yet
-#BuildRequires:  postr-devel
+BuildRequires:  postr
 BuildRequires:  intltool >= 0.40.0
 Requires: eog
+Requires: postr
 
 %description
 This is the Eye of Gnome, an image viewer program. It is meant
@@ -54,6 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/eog/plugins/champlain.eog-plugin
 %_libdir/eog/plugins/exif-display.eog-plugin
 %_libdir/eog/plugins/fit-to-width.eog-plugin
+%_libdir/eog/plugins/postr.eog-plugin
 %_libdir/eog/plugins/pythonconsole.eog-plugin
 %_libdir/eog/plugins/slideshowshuffle.eog-plugin
 %_libdir/eog/plugins/exif-display/
