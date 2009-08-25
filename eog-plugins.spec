@@ -1,10 +1,11 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
 Version: 2.27.91
-Release: %mkrel 1
+Release: %mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch:		eog-plugins-2.27.91-postr-does-not-like-URIs.patch
 URL:		http://www.gnome.org/projects/eog/
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -35,6 +36,7 @@ Slideshow Shuffle
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 
