@@ -8,7 +8,7 @@ Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.b
 URL:		http://www.gnome.org/projects/eog/
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:  gtk+2.0-devel
+BuildRequires:  gtk+2-devel
 BuildRequires:  eog-devel >= 2.19.0
 BuildRequires:  pygtk2.0-devel
 BuildRequires:  libchamplain-devel
