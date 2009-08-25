@@ -10,6 +10,7 @@ URL:		http://www.gnome.org/projects/eog/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:  eog-devel >= 2.19.0
 BuildRequires:  pygtk2.0-devel
+BuildRequires:  gnome-python-devel
 BuildRequires:  libchamplain-devel
 BuildRequires:  libexif-devel
 BuildRequires:  postr
