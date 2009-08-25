@@ -25,7 +25,13 @@ cataloging program. It does proper handling of large images and
 images with full opacity information, and can zoom and scroll
 images quickly while keeping  memory usage constant.
 
-This package contains additional plugins for EOG.
+This package contains additional plugins for EOG:
+Map
+Exif display
+Zoom to fit image width
+Flickr Uploader
+Python Console
+Slideshow Shuffle
 
 %prep
 %setup -q
