@@ -1,15 +1,10 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version: 2.27.91
-Release: %mkrel 3
+Version: 2.27.92
+Release: %mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-#gw from git, fix crash in exif view
-# bgo#593003
-Patch:		eog-plugins-fix-crash-in-exif-view.patch
-#gw from git, call postr using gio file paths
-Patch1:		eog-plugins-2.27.91-use-gio-for-postr.patch
 URL:		http://www.gnome.org/projects/eog/
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -40,8 +35,6 @@ Slideshow Shuffle
 
 %prep
 %setup -q
-%patch -p1
-%patch1 -p1
 
 %build
 
