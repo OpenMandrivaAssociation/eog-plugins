@@ -1,6 +1,6 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version: 2.28.1
+Version: 2.29.2
 Release: %mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -63,6 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/eog/plugins/fit-to-width.eog-plugin
 %_libdir/eog/plugins/postr.eog-plugin
 %_libdir/eog/plugins/pythonconsole.eog-plugin
+%_libdir/eog/plugins/send-by-mail.eog-plugin
 %_libdir/eog/plugins/slideshowshuffle.eog-plugin
 %_libdir/eog/plugins/exif-display/
 %_libdir/eog/plugins/*.so*
