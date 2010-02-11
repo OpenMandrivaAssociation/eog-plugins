@@ -1,6 +1,6 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version: 2.29.5
+Version: 2.29.90
 Release: %mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -13,6 +13,8 @@ BuildRequires:  pygtk2.0-devel
 BuildRequires:  gnome-python-devel
 BuildRequires:  libchamplain-devel
 BuildRequires:  libexif-devel
+#gw for postasa:
+#BuildRequires:  libgdata-devel >= 0.6.0
 BuildRequires:  postr
 BuildRequires:  intltool >= 0.40.0
 Requires: eog
@@ -58,9 +60,9 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-, root, root)
 %doc AUTHORS NEWS README
-%_libdir/eog/plugins/champlain.eog-plugin
 %_libdir/eog/plugins/exif-display.eog-plugin
 %_libdir/eog/plugins/fit-to-width.eog-plugin
+%_libdir/eog/plugins/map.eog-plugin
 %_libdir/eog/plugins/postr.eog-plugin
 %_libdir/eog/plugins/pythonconsole.eog-plugin
 %_libdir/eog/plugins/send-by-mail.eog-plugin
