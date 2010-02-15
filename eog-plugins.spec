@@ -34,6 +34,7 @@ Zoom to fit image width
 Flickr Uploader
 Picasa Uploader
 Python Console
+Send By Mail
 Slideshow Shuffle
 
 %prep
