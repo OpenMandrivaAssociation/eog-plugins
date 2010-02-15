@@ -1,7 +1,7 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
 Version: 2.29.90
-Release: %mkrel 1
+Release: %mkrel 2
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -14,7 +14,7 @@ BuildRequires:  gnome-python-devel
 BuildRequires:  libchamplain-devel
 BuildRequires:  libexif-devel
 #gw for postasa:
-#BuildRequires:  libgdata-devel >= 0.6.0
+BuildRequires:  libgdata-devel >= 0.6.0
 BuildRequires:  postr
 BuildRequires:  intltool >= 0.40.0
 Requires: eog
@@ -32,6 +32,7 @@ Map
 Exif display
 Zoom to fit image width
 Flickr Uploader
+Picasa Uploader
 Python Console
 Slideshow Shuffle
 
@@ -63,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/eog/plugins/exif-display.eog-plugin
 %_libdir/eog/plugins/fit-to-width.eog-plugin
 %_libdir/eog/plugins/map.eog-plugin
+%_libdir/eog/plugins/postasa.eog-plugin
 %_libdir/eog/plugins/postr.eog-plugin
 %_libdir/eog/plugins/pythonconsole.eog-plugin
 %_libdir/eog/plugins/send-by-mail.eog-plugin
