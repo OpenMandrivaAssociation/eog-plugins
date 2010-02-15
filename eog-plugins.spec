@@ -1,7 +1,7 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
 Version: 2.29.90
-Release: %mkrel 2
+Release: %mkrel 3
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
@@ -32,7 +32,7 @@ Map
 Exif display
 Zoom to fit image width
 Flickr Uploader
-Picasa Uploader
+PicasaWeb Uploader
 Python Console
 Send By Mail
 Slideshow Shuffle
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT %name.lang
 
 %{find_lang} %{name} --with-gnome
 
-rm -rf %buildroot%_libdir/eog/plugins/*a 
+rm -f %buildroot%_libdir/eog/plugins/*{.a,.la}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,5 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %_libdir/eog/plugins/send-by-mail.eog-plugin
 %_libdir/eog/plugins/slideshowshuffle.eog-plugin
 %_libdir/eog/plugins/exif-display/
+%_libdir/eog/plugins/postasa
 %_libdir/eog/plugins/*.so*
 %_libdir/eog/plugins/*.py*
