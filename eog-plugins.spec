@@ -1,17 +1,18 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
 Version: 2.30.1
-Release: %mkrel 2
+Release: %mkrel 3
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
+Patch0: eog-plugins-2.30.1-champlain0.8.patch
 URL:		http://www.gnome.org/projects/eog/
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires:  eog-devel >= 2.19.0
 BuildRequires:  pygtk2.0-devel
 BuildRequires:  gnome-python-devel
-BuildRequires:  libchamplain-devel
+BuildRequires:  libchamplain-devel >= 0.7.1
 BuildRequires:  libexif-devel
 #gw for postasa:
 BuildRequires:  libgdata-devel >= 0.6.0
@@ -39,6 +40,8 @@ Slideshow Shuffle
 
 %prep
 %setup -q
+%apply_patches
+autoreconf -fi
 
 %build
 
