@@ -1,11 +1,10 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version: 2.30.1
-Release: %mkrel 3
+Version: 2.30.2
+Release: %mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-Patch0: eog-plugins-2.30.1-champlain0.8.patch
 URL:		http://www.gnome.org/projects/eog/
 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -41,7 +40,7 @@ Slideshow Shuffle
 %prep
 %setup -q
 %apply_patches
-autoreconf -fi
+#autoreconf -fi
 
 %build
 
