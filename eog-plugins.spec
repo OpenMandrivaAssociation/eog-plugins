@@ -1,22 +1,22 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version: 2.30.2
-Release: %mkrel 2
+Version:	3.2.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
-Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/projects/eog/
+Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:  eog-devel >= 2.19.0
-BuildRequires:  pygtk2.0-devel
-BuildRequires:  gnome-python-devel
-BuildRequires:  libchamplain-devel >= 0.7.1
-BuildRequires:  libexif-devel
-#gw for postasa:
-BuildRequires:  libgdata-devel >= 0.6.0
-BuildRequires:  postr
-BuildRequires:  intltool >= 0.40.0
+BuildRequires:  intltool
+BuildRequires:	pkgconfig(champlain-0.12)
+BuildRequires:	pkgconfig(champlain-gtk-0.12)
+BuildRequires:  pkgconfig(eog)
+BuildRequires:	pkgconfig(gsettings-desktop-schemas)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(libpeas-gtk-1.0)
+BuildRequires:  pkgconfig(libexif)
+BuildRequires:  pkgconfig(libgdata)
+
 Requires: eog
 Requires: postr
 
@@ -40,39 +40,22 @@ Slideshow Shuffle
 %prep
 %setup -q
 %apply_patches
-#autoreconf -fi
 
 %build
-
-%configure2_5x
+%configure2_5x \
+	--disable-static
 
 %make
 
-
 %install
-rm -rf $RPM_BUILD_ROOT %name.lang
 %makeinstall_std
+rm -f %{buildroot}%{_libdir}/eog/plugins/*.la
 
 %{find_lang} %{name} --with-gnome
 
-rm -f %buildroot%_libdir/eog/plugins/*{.a,.la}
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
 %files -f %{name}.lang
-%defattr(-, root, root)
 %doc AUTHORS NEWS README
-%_libdir/eog/plugins/exif-display.eog-plugin
-%_libdir/eog/plugins/fit-to-width.eog-plugin
-%_libdir/eog/plugins/map.eog-plugin
-%_libdir/eog/plugins/postasa.eog-plugin
-%_libdir/eog/plugins/postr.eog-plugin
-%_libdir/eog/plugins/pythonconsole.eog-plugin
-%_libdir/eog/plugins/send-by-mail.eog-plugin
-%_libdir/eog/plugins/slideshowshuffle.eog-plugin
-%_libdir/eog/plugins/exif-display/
-%_libdir/eog/plugins/postasa
-%_libdir/eog/plugins/*.so*
-%_libdir/eog/plugins/*.py*
+%{_datadir}/eog/plugins/*
+%{_libdir}/eog/plugins/*
+%{_datadir}/glib-2.0/schemas/*.xml
+
