@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libpeas-gtk-1.0)
 BuildRequires:  pkgconfig(libexif)
 BuildRequires:  pkgconfig(libgdata)
+BuildRequires:  GL-devel
 
 Requires: eog
 Requires: postr
