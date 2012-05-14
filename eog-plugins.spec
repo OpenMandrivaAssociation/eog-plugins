@@ -1,6 +1,6 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version:	3.2.2
+Version:	3.4.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
@@ -9,7 +9,7 @@ Source0: 	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.x
 
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(champlain-0.12)
-BuildRequires:	pkgconfig(champlain-gtk-0.12)
+#BuildRequires:	pkgconfig(champlain-gtk-0.12)
 BuildRequires:  pkgconfig(eog)
 BuildRequires:	pkgconfig(gsettings-desktop-schemas)
 BuildRequires:	pkgconfig(gtk+-3.0)
@@ -58,4 +58,3 @@ rm -f %{buildroot}%{_libdir}/eog/plugins/*.la
 %{_datadir}/eog/plugins/*
 %{_libdir}/eog/plugins/*
 %{_datadir}/glib-2.0/schemas/*.xml
-
