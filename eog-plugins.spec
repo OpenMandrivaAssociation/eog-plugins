@@ -1,11 +1,11 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:     	eog-plugins
-Version:	3.8.0
+Version:	3.9.5
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 URL:		http://www.gnome.org/projects/eog/
-Source0: 	ftp://ftp.gnome.org:21/pub/GNOME/sources/eog-plugins/3.8/%{name}-%{version}.tar.xz
+Source0: 	ftp://ftp.gnome.org:21/pub/GNOME/sources/eog-plugins/3.9/%{name}-%{version}.tar.xz
 
 BuildRequires:  intltool
 BuildRequires:	pkgconfig(champlain-0.12)
@@ -155,5 +155,6 @@ rm -f %{buildroot}%{_libdir}/eog/plugins/*.la
 * Tue Aug 25 2009 Götz Waschk <waschk@mandriva.org> 2.27.91-1mdv2010.0
 + Revision: 420838
 - import eog-plugins
+
 
 

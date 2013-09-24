@@ -1,2 +1,5 @@
-sources:
+removed_sources:
+  eog-plugins-3.4.1.tar.xz: 50430cf475acd51238f89057ce7010d5cc5164a0
   eog-plugins-3.8.0.tar.xz: 91cd3cffe6a58040947fd90ee91f915e1e79d8a3
+sources:
+  eog-plugins-3.9.5.tar.xz: f1f99e5dbf0e5b4a64f9b784595c1d938101079d
