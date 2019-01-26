@@ -41,6 +41,7 @@ This package contains additional plugins for EOG:
 %{_datadir}/eog/plugins/*
 %{_libdir}/eog/plugins/*
 %{_datadir}/glib-2.0/schemas/*.xml
+%{_datadir}//appdata/eog-*
 
 #----------------------------------------------------------------------------
 
@@ -48,13 +49,12 @@ This package contains additional plugins for EOG:
 %setup -q
 
 %build
-%configure2_5x \
-	--disable-static
+%configure
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} --with-gnome
 
