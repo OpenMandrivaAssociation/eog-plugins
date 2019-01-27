@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(libpeas-gtk-1.0)
 BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libgdata)
 
-Requires:	eog
+Requires:	eog >= 3.28.4
 Requires:	postr
 
 %description
