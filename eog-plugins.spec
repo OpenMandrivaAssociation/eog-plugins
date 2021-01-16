@@ -17,7 +17,7 @@ BuildRequires:	pkgconfig(libexif)
 BuildRequires:	pkgconfig(libgdata)
 
 Requires:	eog >= 3.28.4
-Requires:	postr
+#Requires:	postr
 
 %description
 This is the Eye of Gnome, an image viewer program. It is meant
