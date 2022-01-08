@@ -1,6 +1,6 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:		eog-plugins
-Version:	3.26.7
+Version:	3.26.8
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
