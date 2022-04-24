@@ -43,7 +43,7 @@ This package contains additional plugins for EOG:
 %{_datadir}/eog/plugins/*
 %{_libdir}/eog/plugins/*
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_datadir}//appdata/eog-*
+#{_datadir}//appdata/eog-*
 
 #----------------------------------------------------------------------------
 
