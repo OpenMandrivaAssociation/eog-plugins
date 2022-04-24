@@ -1,11 +1,13 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:		eog-plugins
-Version:	3.26.8
+Version:	42.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org/projects/eog/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eog-plugins/3.26/%{name}-%{version}.tar.xz
+
+BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(eog)
@@ -41,7 +43,7 @@ This package contains additional plugins for EOG:
 %{_datadir}/eog/plugins/*
 %{_libdir}/eog/plugins/*
 %{_datadir}/glib-2.0/schemas/*.xml
-%{_datadir}//appdata/eog-*
+%{_datadir}/metainfo/eog-*
 
 #----------------------------------------------------------------------------
 
@@ -49,12 +51,12 @@ This package contains additional plugins for EOG:
 %setup -q
 
 %build
-%configure
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name} --with-gnome
 
