@@ -6,6 +6,8 @@ License:	GPLv2+
 Group:		Graphical desktop/GNOME
 Url:		http://www.gnome.org/projects/eog/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/eog-plugins/3.26/%{name}-%{version}.tar.xz
+
+BuildRequires:  meson
 BuildRequires:	intltool
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(eog)
@@ -49,12 +51,12 @@ This package contains additional plugins for EOG:
 %setup -q
 
 %build
-%configure
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name} --with-gnome
 
