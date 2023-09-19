@@ -1,11 +1,11 @@
 Summary:	Plugins for the Eye of GNOME image viewer
 Name:		eog-plugins
 Version:	44.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
-Url:		http://www.gnome.org/projects/eog/
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/eog-plugins/42.2/%{name}-%{version}.tar.xz
+Url:		https://www.gnome.org/projects/eog/
+Source0:	https://ftp.gnome.org/pub/GNOME/sources/eog-plugins/42.2/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
 BuildRequires:	intltool
